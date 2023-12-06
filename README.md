@@ -39,4 +39,16 @@ The filename of your <code>.cs</code> file should be in the following format:<br
 [Title of your program] by [First Name Last Name].cs<br>
 <i>Ex. Flight Duration Calculator by Kenneth Jeminez.cs</i><br><br>
 
-<b>Note</b>: Everytime you are done with a feature, please update the status/progress of your project.
+<b>Note</b>: Everytime you are done with a feature, please update the status/progress of your project.<br><br>
+
+Upload your C# file in the <code>Projects</code> folder.<br><br>
+
+# Sololearn Certificate
+Complete the Introduction to C# course on Sololearn to get your certificate. Once done, export or download your certificate in <code>PDF</code> format.<br><br>
+
+The filename of your <code>PDF</code> file should be in the following format:<br><br>
+
+[Last Name, First Name Middle Initial].pdf<br>
+<i>Ex. Jeminez, Kenneth.pdf</i><br><br>
+
+Upload your certificate in the <code>Certificates</code> folder.
