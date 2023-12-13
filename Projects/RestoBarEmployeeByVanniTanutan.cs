@@ -8,7 +8,7 @@ Fun Facts!
 >The products consist of Menu, Dessert, and Drink
 >Anything you ordered will be stored on ur receipt
 >When ordering you can check your receipt anytime u want
->This is a 430 line of Codes! (including the comments lol)
+>This is a 434 lines of Codes! (including the comments lol)
 >maka "pasar unta" cutie! 
 */
 using System;
@@ -391,10 +391,9 @@ static void bill(){
      if (ys == "1"){
          home(); 
      }else{
-         //adding last part of list
-          
+        //showing receipt
          resibo(recept);
-         ch(); //the reciept
+         ch(); //paying
          Console.WriteLine($"Thank you for Purchasing at Resto Bar Hope to see you again!");
          Environment.Exit(0);// exit
      }
