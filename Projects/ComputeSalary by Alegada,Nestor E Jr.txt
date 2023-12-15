@@ -1,0 +1,6 @@
+﻿Build started...
+1>------ Build started: Project: ComputSalary.cs, Configuration: Debug Any CPU ------
+1>Skipping analyzers to speed up the build. You can execute 'Build' or 'Rebuild' command to run analyzers.
+1>ComputSalary.cs -> C:\Users\PC\source\repos\ComputSalary.cs\bin\Debug\net7.0\ComputSalary.cs.dll
+========== Build: 1 succeeded, 0 failed, 0 up-to-date, 0 skipped ==========
+========== Build started at 9:49 AM and took 02.147 seconds ==========
