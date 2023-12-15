@@ -1,10 +1,62 @@
-<Project Sdk="Microsoft.NET.Sdk">
+using System;
 
-  <PropertyGroup>
-    <OutputType>Exe</OutputType>
-    <TargetFramework>net7.0</TargetFramework>
-    <ImplicitUsings>enable</ImplicitUsings>
-    <Nullable>enable</Nullable>
-  </PropertyGroup>
+class RestaurantSalary
+{
+    static void Main()
+    {
+        // Introduction and user input
+        Console.WriteLine("Welcome to the Restaurant Salary Calculator!");
+        Console.WriteLine("Enter the name of the worker:");
+        string name = Console.ReadLine();
 
-</Project>
+        // Validate and get hours worked
+        int hours;
+        do
+        {
+            Console.WriteLine("Enter the hours worked this week:");
+        } while (!int.TryParse(Console.ReadLine(), out hours) || hours < 0);
+
+        // Calculate salary
+        decimal salary = CalculateSalary(hours);
+
+        // Display results
+        Console.WriteLine("===========================================");
+        Console.WriteLine("Summary for " + name);
+        Console.WriteLine("Total hours worked: " + hours);
+        Console.WriteLine("The salary of " + name + " is " + salary.ToString("C"));
+    }
+
+    static decimal CalculateSalary(int hours)
+    {
+        // Constants and default values
+        decimal wagePerHour = 20.0m;
+        int maxHours = 40;
+        decimal overtimeMultiplier = 1.5m;
+
+        // Validate input
+        if (hours <= 0)
+        {
+            Console.WriteLine("Invalid input. Hours worked must be greater than 0.");
+            return 0;
+        }
+
+        // Calculate regular and overtime pay
+        int regularHours = Math.Min(hours, maxHours);
+        decimal overtimeHours = Math.Max(0, hours - maxHours);
+        decimal overtimePay = overtimeHours * (wagePerHour * overtimeMultiplier);
+        decimal regularPay = regularHours * wagePerHour;
+
+        // Total salary
+        decimal totalSalary = regularPay + overtimePay;
+
+        // Display breakdown
+        Console.WriteLine("Salary Breakdown:");
+        Console.WriteLine("Regular Hours: " + regularHours);
+        Console.WriteLine("Regular Pay: " + regularPay.ToString("C"));
+        Console.WriteLine("Overtime Hours: " + overtimeHours);
+        Console.WriteLine("Overtime Pay: " + overtimePay.ToString("C"));
+        Console.WriteLine("-------------------------------------------");
+
+        return totalSalary;
+    }
+}
