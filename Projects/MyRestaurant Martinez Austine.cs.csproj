@@ -1,0 +1,178 @@
+﻿using System;
+
+public class MyRestaurant
+{
+    public static int order, overall = 0, amount, menu1, menu2, menu3;
+    public static readonly int FRIED_CHICKEN_PRICE = 55, SINUGBA_PRICE = 40, LUMPIA_PRICE = 20,
+        BEEF_PRICE = 50, SPAGHETTI_PRICE = 76, MOUNTAIN_DEW_PRICE = 35, C2_PRICE = 28,
+        COKE_PRICE = 30, WATER_PRICE = 20, GULAMAN_PRICE = 45, SALAD_PRICE = 55, HALO_HALO_PRICE = 55;
+
+    public static void Main(string[] args)
+    {
+        do
+        {
+            Console.WriteLine("----------------------");
+            Console.WriteLine("-      Main Menu     -");
+            Console.WriteLine("-   1.Dish Menu      -");
+            Console.WriteLine("-   2.Drinks Menu    -");
+            Console.WriteLine("-   3.Dessert Menu   -");
+            Console.WriteLine("-   4.Exit           -");
+            Console.WriteLine("----------------------");
+
+            Console.Write("Enter your order here: ");
+            order = int.Parse(Console.ReadLine());
+
+            switch (order)
+            {
+                case 1:
+                    Menu1();
+                    break;
+                case 2:
+                    Menu2();
+                    break;
+                case 3:
+                    Menu3();
+                    break;
+                default:
+                    Console.WriteLine("Thank You For Coming\n");
+                    break;
+            }
+
+            Console.WriteLine("Thank you");
+            Console.WriteLine($"Your Overall Bill: {overall}\n");
+
+        } while (order != 4);
+
+        Console.WriteLine("Final Summary:");
+    }
+
+
+    public static void Menu1()
+    {
+        Console.WriteLine("--------------------------");
+        Console.WriteLine("-  1. Friedchicken 55    -");
+        Console.WriteLine("-  2. Sinugba 40         -");
+        Console.WriteLine("-  3. Lumpia 20          -");
+        Console.WriteLine("-  4. Beef 50            -");
+        Console.WriteLine("-  5. Spaghetti 76       -");
+        Console.WriteLine("--------------------------");
+        Console.Write("Select Your Dish: ");
+        menu1 = int.Parse(Console.ReadLine());
+
+        switch (menu1)
+        {
+            case 1:
+                Console.Write("Quantity: ");
+                amount = int.Parse(Console.ReadLine());
+                Console.WriteLine($"You ordered {amount} Friedchicken\n");
+                overall += FRIED_CHICKEN_PRICE * amount;
+                break;
+            case 2:
+                Console.Write("Quantity: ");
+                amount = int.Parse(Console.ReadLine());
+                Console.WriteLine($"You ordered {amount} Sinugba\n");
+                overall += SINUGBA_PRICE * amount;
+                break;
+            case 3:
+                Console.Write("Quantity: ");
+                amount = int.Parse(Console.ReadLine());
+                Console.WriteLine($"You ordered {amount} Lumpia\n");
+                overall += LUMPIA_PRICE * amount;
+                break;
+            case 4:
+                Console.Write("Quantity: ");
+                amount = int.Parse(Console.ReadLine());
+                Console.WriteLine($"You ordered {amount} Beef\n");
+                overall += BEEF_PRICE * amount;
+                break;
+            case 5:
+                Console.Write("Quantity: ");
+                amount = int.Parse(Console.ReadLine());
+                Console.WriteLine($"You ordered {amount} Spaghetti\n");
+                overall += SPAGHETTI_PRICE * amount;
+                break;
+            default:
+                Console.WriteLine("Invalid selection");
+                break;
+        }
+    }
+
+    public static void Menu2()
+    {
+        Console.WriteLine("------------------------");
+        Console.WriteLine("-  1. MountainDew 35   -");
+        Console.WriteLine("-  2. C2 28            -");
+        Console.WriteLine("-  3. Coke 30          -");
+        Console.WriteLine("-  4. Water 20\n       -");
+        Console.WriteLine("------------------------");
+        Console.Write("Select Your Drinks: ");
+        menu2 = int.Parse(Console.ReadLine());
+
+        switch (menu2)
+        {
+            case 1:
+                Console.Write("Quantity: ");
+                amount = int.Parse(Console.ReadLine());
+                Console.WriteLine($"You ordered {amount} MountainDew\n");
+                overall += MOUNTAIN_DEW_PRICE * amount;
+                break;
+            case 2:
+                Console.Write("Quantity: ");
+                amount = int.Parse(Console.ReadLine());
+                Console.WriteLine($"You ordered {amount} C2\n");
+                overall += C2_PRICE * amount;
+                break;
+            case 3:
+                Console.Write("Quantity: ");
+                amount = int.Parse(Console.ReadLine());
+                Console.WriteLine($"You ordered {amount} Coke\n");
+                overall += COKE_PRICE * amount;
+                break;
+            case 4:
+                Console.Write("Quantity: ");
+                amount = int.Parse(Console.ReadLine());
+                Console.WriteLine($"You ordered {amount} Water\n");
+                overall += WATER_PRICE * amount;
+                break;
+            default:
+                Console.WriteLine("Invalid selection");
+                break;
+        }
+    }
+
+    public static void Menu3()
+    {
+        Console.WriteLine("---------------------");
+        Console.WriteLine("-  1. Gulaman 45    -");
+        Console.WriteLine("-  2. Salad 55      -");
+        Console.WriteLine("-  3. HaloHalo 55   -");
+        Console.WriteLine("---------------------");
+        Console.Write("Select Your Desserts: ");
+        menu3 = int.Parse(Console.ReadLine());
+
+        switch (menu3)
+        {
+            case 1:
+                Console.Write("Quantity: ");
+                amount = int.Parse(Console.ReadLine());
+                Console.WriteLine($"You ordered {amount} Gulaman\n");
+                overall += GULAMAN_PRICE * amount;
+                break;
+            case 2:
+                Console.Write("Quantity: ");
+                amount = int.Parse(Console.ReadLine());
+                Console.WriteLine($"You ordered {amount} Salad\n");
+                overall += SALAD_PRICE * amount;
+                break;
+            case 3:
+                Console.Write("Quantity: ");
+                amount = int.Parse(Console.ReadLine());
+                Console.WriteLine($"You ordered {amount} HaloHalo\n");
+                overall += HALO_HALO_PRICE * amount;
+                break;
+            default:
+                Console.WriteLine("Invalid selection\n");
+                break;
+        }
+    }
+}
