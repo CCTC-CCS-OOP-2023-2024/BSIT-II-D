@@ -1,8 +1,12 @@
 ﻿using System;
 
+//User Input
 public class JSTORE
 {
+//MODULE:1 GETTING STARTED
 	public static int order, allprod = 0, amount, menu1, menu2, menu3;
+
+//Variables
 	public static readonly int Nike_pce = 800, Adidas_pce = 600, Vans_pce = 500,
 		Rels_pce = 100, Phew_pce = 250, Wats_pce = 500, Pain_pce = 280,
 		Slight_pce = 400, Prime_pce = 500;
@@ -11,6 +15,8 @@ public class JSTORE
 	{
 		do
 		{
+//Module2: Program Structure
+
 			Console.WriteLine("====================");
 			Console.WriteLine("*      JSTORE       *");
 			Console.WriteLine("|   1.Shoes         |");
@@ -19,6 +25,7 @@ public class JSTORE
 			Console.WriteLine("|   4.Exit          |");
 			Console.WriteLine("=====================");
 
+//Basic Concepts (Output)
 			Console.Write("Purchase your order: ");
 			order = int.Parse(Console.ReadLine());
 
@@ -40,12 +47,14 @@ public class JSTORE
 
 			Console.WriteLine($"Total Bill: {allprod}\n");
 
+//while loop
+
 		} while (order != 4);
 
 
 	}
 
-
+//Data types
 	public static void Menu1()
 	{
 		Console.WriteLine("=====================");
@@ -62,6 +71,10 @@ public class JSTORE
 		Console.Write("Quantity: ");
 		amount = int.Parse(Console.ReadLine());
 		Console.WriteLine($"You ordered {amount} Nike\n");
+
+//Doing match
+//Arithmetic Operators
+
 		allprod += Nike_pce * amount;
 		break;
 		case 2:
