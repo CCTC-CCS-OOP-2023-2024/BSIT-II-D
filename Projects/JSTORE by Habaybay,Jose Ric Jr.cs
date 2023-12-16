@@ -14,7 +14,7 @@ public class JSTORE
 		{
 
 
-			Console.WriteLine("====================");
+			Console.WriteLine("=====================");
 			Console.WriteLine("*      JSTORE       *");
 			Console.WriteLine("|   1.Shoes         |");
 			Console.WriteLine("|   2.Watch         |");
