@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 
 class FORGOODNESSCAKES
 {
@@ -12,20 +12,20 @@ class FORGOODNESSCAKES
         Console.WriteLine("##################################");
 
 
-        // Basic Concepts (Output)
-        Console.WriteLine("Enjoy our fresh and tasty cake made by Gennesis.");
+        // Feature 2- Basic Concepts (Output)
+        Console.WriteLine("Enjoy our fresh and tasty cake and shake made by Gennesis.");
 
-        // Variables
+        // Freature 3- Variables
         int numberOfCakes = 18;
         Console.WriteLine("^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^");
         Console.WriteLine($"|> We have {numberOfCakes} cakes available with different flavor and toppings.  |");
 
-        // Data Types
-        double slicePrice = 85.2;
+        // Freature 4- Data Types
+        double slicePrice = 2.24;
         Console.WriteLine($"|> A slice costs ${slicePrice}.                                            |");
 
 
-        // Doing Math
+        // Feature 5- Doing Math
         int cakeSlicePerBox = 7;
         double totalBoxUsed = numberOfCakes * cakeSlicePerBox;
         Console.WriteLine($"|> We use {totalBoxUsed} box daily.                                           |");
@@ -33,26 +33,147 @@ class FORGOODNESSCAKES
 
         // Module 2 - Operators and Strings
 
-        // Arithmetic Operators
-        int sweetPrice = 75;
+        // Feature 1- Arithmetic Operators
+        int sweetPrice = 15;
         int totalRevenue = numberOfCakes * sweetPrice;
         Console.WriteLine($"Today's revenue: ${totalRevenue}");
 
-        // Assignment Operators
+        // Feature 2- Assignment Operators
         totalRevenue += 20;
         Console.WriteLine($"Updated revenue: ${totalRevenue}");
 
-        // User Input
+        // Feature 3- User Input
         Console.Write("Please enter your name: ");
         string customerName = Console.ReadLine();
         Console.WriteLine($"Hi dear, {customerName} our costumer!");
 
-        // More on Strings
-        Console.WriteLine("Sweetest Special Treat (CAKE CORNER):\n\t 1. Strawberry Cake\n\t 2.Bravo Cake\n\t 3. Jelly Cake");
+        // Feature 4- More on Strings
+        Console.WriteLine("Sweetest Special Treat (CAKE CORNER):\n\t 1. Strawberry Cake (RedVelvet Flavor)\n\t 2. Bravo Cake (Chocolate Flavor)\n\t 3. Jelly Cake (Vanilla Flavor)");
+        Console.WriteLine("If not interested with our special treat, feel free to choose other option with same flavor of our special treat.");
         Console.WriteLine("Sweetest Special Treat (SHAKE CORNER):\n\t 1. Mango Graham Shake\n\t 2. Mixed Fruit Shake\n\t 3. Oreo Cookie Shake");
 
-        // Concatenation and Interpolation
-        string specialTreat = "CAKE AND SHAKE";
+        // Feature 5- Concatenation and Interpolation
+        string specialTreat = "CAKE and SHAKE";
         Console.WriteLine("Taste our " + specialTreat + " with toppings of real fruits.");
+
+        // Module 3 - Decision Making
+
+        // Feature 1- if Statement
+        Console.Write("Would you like to try our special treat? (yes/no): ");
+        string response = Console.ReadLine();
+
+        if (response.ToLower() == "yes")
+        {
+            Console.WriteLine("Great choice! Indulge in the sweetness of our special treats.");
+        }
+        else
+        {
+            Console.WriteLine("No worries! We have a variety of other options to choose from.");
+        }
+
+        // Feature 2- else-if Statement
+        Console.Write("Are you a cake lover or a shake enthusiast? (cake/shake): ");
+        string preference = Console.ReadLine();
+
+        if (preference.ToLower() == "cake")
+        {
+            Console.WriteLine("Fantastic! Our cakes are made with love and the finest ingredients.");
+        }
+        else if (preference.ToLower() == "shake")
+        {
+            Console.WriteLine("Awesome! Our shakes are a delightful blend of flavors.");
+        }
+        else
+        {
+            Console.WriteLine("Invalid choice. Please choose between cake and shake.");
+        }
+
+        // Feature 3- switch Statement
+        Console.WriteLine("Which flavor of cake would you like?");
+        Console.WriteLine("1. Chocolate");
+        Console.WriteLine("2. Vanilla");
+        Console.WriteLine("3. Red Velvet");
+        Console.Write("Enter the corresponding number: ");
+
+        int flavorChoice = int.Parse(Console.ReadLine());
+
+        switch (flavorChoice)
+        {
+            case 1:
+                Console.WriteLine("Indulge in the rich and decadent Chocolate cake!");
+                break;
+            case 2:
+                Console.WriteLine("Enjoy the classic goodness of our Vanilla cake!");
+                break;
+            case 3:
+                Console.WriteLine("Experience the luxurious taste of our Red Velvet cake!");
+                break;
+            default:
+                Console.WriteLine("Invalid choice. Please choose a valid flavor.");
+                break;
+        }
+
+        // Feature 4- Logical Operators
+        Console.Write("Are you interested in a cake slice AND a shake? (yes/no): ");
+        string interest = Console.ReadLine();
+
+        if (interest.ToLower() == "yes" && preference.ToLower() == "cake")
+        {
+            Console.WriteLine("Perfect! A cake slice and a shake will make your experience even sweeter.");
+        }
+        else
+        {
+            Console.WriteLine("No problem! Feel free to explore our other delightful options.");
+        }
+
+        // Feature 5- Comparison Operators
+        Console.Write("How many cake slices would you like to order? Enter a number: ");
+        int slicesOrdered = int.Parse(Console.ReadLine());
+
+        if (slicesOrdered > 0)
+        {
+            Console.WriteLine($"Thank you for ordering {slicesOrdered} cake slices. Enjoy your treat!");
+        }
+        else
+        {
+            Console.WriteLine("Invalid quantity. Please enter a valid number of cake slices to order.");
+        }
+
+        // Feature 6- Ternary Operators
+        string discountMessage = (slicesOrdered >= 8) ? "You are discounted. Enjoy every bite of slices." : "Regular price offered. Feel free to comeback if you want more.";
+
+        Console.WriteLine(discountMessage);
+
+        // Module 4- Loops
+
+        // Feature 1- for Loop
+        for (int l = 1; l <= 5; l++)
+        {
+            Console.WriteLine($"Order {l} is ready.");
+        }
+
+        // Freature 2- while Loop
+        int availableCakes = 5;
+        while (availableCakes > 0)
+        {
+            Console.WriteLine($"{availableCakes} cakes available.");
+            availableCakes--;
+        }
+        // Feature 3- Break and Continue
+        for (int l = 1; l <= 10; l++)
+        {
+            if (l % 2 == 0)
+            {
+                continue; 
+            }
+
+            Console.WriteLine($"Order {l} is ready.");
+
+            if (l == 8)
+            {
+                break; 
+
+            }
+        }
     }
 }
