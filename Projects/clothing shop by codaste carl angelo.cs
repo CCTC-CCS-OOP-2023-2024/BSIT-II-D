@@ -1,20 +1,19 @@
-﻿
 using System;
 
 public class Myclothingshop
 {
     public static int order, all = 0, amount, menu1, menu2, menu3;
     public static readonly int louis_Vuitton_PRICE = 66360,
-        hermes_internatonal_PRICE = 45000, 
+        hermes_internatonal_PRICE = 45000,
         burbery_PRICE = 35000,
         marc_jacobs_PRICE = 20000,
-        balmain_PRICE = 20000, 
+        balmain_PRICE = 20000,
         levis_PRICE = 10000,
         lee_PRICE = 1500,
         wrangler_PRICE = 4000,
         AG_jeans_PRICE = 4500,
         puma_PRICE = 3000,
-        adidas_PRICE = 10000, 
+        adidas_PRICE = 10000,
         skechers_PRICE = 5000;
 
     public static void Main(string[] args)
@@ -23,7 +22,7 @@ public class Myclothingshop
         do
         {
             Console.WriteLine("<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<\n"+
-                             "=          main brand                 \n"+ 
+                             "=          main brand                 \n"+
                              "=   1.t-shirt brand   2.jeans brand   \n"+
                              "=>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>\n"+
                              "=   3.shoes brand     4.exit          \n"+
@@ -45,8 +44,21 @@ public class Myclothingshop
                     Menu3();
                     break;
                 default:
-                    Console.WriteLine("Thank You For Coming\n");
+                    Console.WriteLine("Invalid selection\n");
                     break;
+            }
+           
+            if (overall > MAX_ORDER_AMOUNT)
+            {
+                Console.WriteLine("You've reached the maximum order amount. Cannot add more items.");
+            }
+            else if (overall < MIN_ORDER_AMOUNT)
+            {
+                Console.WriteLine("Minimum order amount not reached. Please add more items to your order.");
+            }
+            else
+            {
+                Console.WriteLine($"Your current order total is: {overall}");
             }
 
             Console.WriteLine("Thank you");
@@ -106,6 +118,19 @@ public class Myclothingshop
                 Console.WriteLine("Invalid selection");
                 break;
         }
+       
+        if (overall > MAX_ORDER_AMOUNT)
+            {
+                Console.WriteLine("You've reached the maximum order amount. Cannot add more items.");
+            }
+            else if (overall < MIN_ORDER_AMOUNT)
+            {
+                Console.WriteLine("Minimum order amount not reached. Please add more items to your order.");
+            }
+            else
+            {
+                Console.WriteLine($"Your current order total is: {overall}");
+            }
     }
 
     public static void Menu2()
@@ -149,6 +174,19 @@ public class Myclothingshop
                 Console.WriteLine("Invalid selection");
                 break;
         }
+       
+        if (overall > MAX_ORDER_AMOUNT)
+            {
+                Console.WriteLine("You've reached the maximum order amount. Cannot add more items.");
+            }
+            else if (overall < MIN_ORDER_AMOUNT)
+            {
+                Console.WriteLine("Minimum order amount not reached. Please add more items to your order.");
+            }
+            else
+            {
+                Console.WriteLine($"Your current order total is: {overall}");
+            }
     }
 
     public static void Menu3()
@@ -180,12 +218,27 @@ public class Myclothingshop
                 amount = int.Parse(Console.ReadLine());
                 Console.WriteLine($"You ordered {amount} skechers\n");
                 all += skechers_PRICE * amount;
+
+
                 break;
             default:
                 Console.WriteLine("Invalid selection\n");
                 break;
         }
-    }
+       
+        if (overall > MAX_ORDER_AMOUNT)
+            {
+                Console.WriteLine("You've reached the maximum order amount. Cannot add more items.");
+            }
+            else if (overall < MIN_ORDER_AMOUNT)
+            {
+                Console.WriteLine("Minimum order amount not reached. Please add more items to your order.");
+            }
+            else
+            {
+                Console.WriteLine($"Your current order total is: {overall}");
+            }
+}
 }
 
 
